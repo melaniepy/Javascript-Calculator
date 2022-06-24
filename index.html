@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Simple Calculator - Javascript</title>
+</head>
+<body>
+    <script language = "Javascript" type="text/javascript">
+        // read number in the program
+        const num1 = parseFloat( prompt('Enter nr1: '));// 10 >> '10'
+        const num2 = parseFloat( prompt('Enter nr2: '));//abc, null NaN
+        // read operator
+        const operator = prompt('Enter operator (+, -, /, *)');
+        let result = 0;
+        if(isNaN(num1) || isNaN(num2)){
+            alert('Wrong Input! Refresh the page again and provide data!');
+        }else{
+            if(operator == '+'){
+                result = num1 + num2;
+            }else if(operator == '-'){
+                result = num1 - num2;
+            }else if(operator == '*'){
+                result = num1 * num2;
+            }else if(operator == '/'){
+                result = num1 / num2;
+            }
+            document.write(num1 + operator + num2 + '=' + result);
+        }
+    </script>
+</body>
+</html>
